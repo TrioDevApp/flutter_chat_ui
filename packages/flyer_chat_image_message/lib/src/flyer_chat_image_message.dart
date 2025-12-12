@@ -254,13 +254,13 @@ class _FlyerChatImageMessageState extends State<FlyerChatImageMessage>
       fit: StackFit.expand,
       children: [
         _placeholderProvider != null
-            ? Image(image: _placeholderProvider!, fit: BoxFit.fill)
+            ? Image(image: _placeholderProvider!, fit: BoxFit.cover)
             : Container(
                 color: widget.placeholderColor ?? theme.surfaceContainerLow,
               ),
         Image(
           image: _imageProvider,
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
           loadingBuilder: (context, child, loadingProgress) {
             if (loadingProgress == null) {
               return child;
